@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Node js</title>
+    <script src = "ejs_production.js"></script>
+
+<style>
+body{
+  background: skyblue;
+  font-family: verdana;
+  color:#fff;
+  padding:30px;
+
+}
+h1{
+  font-size:48px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+
+}
+p{
+  font-size: 16px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+      <% include partials/nav.ejs %>
+  <h1> Contact the Code Ninjas</h1>
+  <p> Don't hesitate to say something about us</p>
+<form id = "contact-form" method="POST" action = "/contact">
+  <label for = "who"> Who do you want to contact?</label><br/>
+  <input type = "text" name = "who" value = "<%= qs.person %>"/><br/>
+  <label for = "who"> Which department?</label><br>
+  <input type = "text" name = "departmet" value = "<%= qs.dept %>"/><br/>
+  <label for = "email">Your E-mail</label><br/>
+  <input type = "email" name = "email" value = "<%= qs.email %>"/><br/>
+  <input type = "submit"  value = "submit"/>
+</form>
+
+</body>
+</html>

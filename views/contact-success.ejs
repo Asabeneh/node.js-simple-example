@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Node js</title>
+    <script src = "ejs_production.js"></script>
+
+<style>
+body{
+  background: skyblue;
+  font-family: verdana;
+  color:#fff;
+  padding:30px;
+
+}
+h1{
+  font-size:48px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+
+}
+p{
+  font-size: 16px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+      <% include partials/nav.ejs %>
+  <h1> Contact the Code Ninjas</h1>
+  <p> Thanks for getting in touch</p>
+  <p> You contacted<%=data.who %> in the <%=data.department %>department .</p>
+  <p> We will reply you at <%=data.email %></p>
+
+
+</body>
+</html>
